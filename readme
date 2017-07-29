@@ -28,5 +28,6 @@ npm install  -g urllib-sync
 ps aux|grep anyproxy | grep -v 'grep'|awk '{print $2}' |xargs kill -9
 
 
-#虚拟机相关命令
-vagrant box add weixin_caiji.box --name weixin_caiji
+按键脚本精灵的代码，实现自动点击公众号的历史消息，然后下来历史文章列表。
+windows_微信客户端模拟浏览公众号.Q
+
