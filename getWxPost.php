@@ -33,5 +33,9 @@ $ret = $db->get_all($select_sql);
             //$url = "https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=".$biz."&scene=124#wechat_redirect";//拼接公众号历史消息url地址（第二种页面形式）
             //更新刚才提到的公众号表中的采集时间time字段为当前时间戳。
         }
-        echo "<script>setTimeout(function(){window.location.href='".$url."';},2000);</script>";//将下一个将要跳转的$url变成js脚本，由anyproxy注入到微信页面中。
+       // var_dump($url);
+        //将下一个将要跳转的$url变成js脚本，由anyproxy注入到微信页面中。
+        //echo "<script>window.setTimeout(window.location='".$url."',2000);</script>";
+       echo '<meta http-equiv=refresh content="8;url='.$url.'">';
+
 ?>

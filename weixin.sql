@@ -23,7 +23,7 @@ CREATE TABLE `post` (
   `likeNum` int(11) NOT NULL DEFAULT '0' COMMENT '文章点赞量',
   PRIMARY KEY (`id`)
 ) ;
-
+ALTER TABLE  `post` ADD  `comment` TEXT NOT NULL DEFAULT  ''
 CREATE TABLE `tmplist` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `content_url` varchar(100) DEFAULT NULL COMMENT '文章地址',

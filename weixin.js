@@ -68,6 +68,16 @@ module.exports = {
                 return null;
             }
             return null;
+         }else if(/mp\/appmsg_comment/i.test(requestDetail.url)){//当链接地址为公众号文章阅读量和点赞量时
+            console.log("appmsg_comment");
+            try {  
+
+                HttpPost(responseStr,requestDetail.url,"getComment.php");//函数是后文定义的，功能是将文章阅读量点赞量的json发送到服务器
+            
+            }catch(e){
+                return null;
+            }
+            return null;
          } else if(/s\?__biz/i.test(requestDetail.url) || /mp\/rumor/i.test(requestDetail.url)){//当链接地址为公众号文章时（rumor这个地址是公众号文章被辟谣了）
             console.log("getWxPost");
             var newResponse = Object.assign({}, responseDetail.response);
