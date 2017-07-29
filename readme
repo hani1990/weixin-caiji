@@ -1,0 +1,32 @@
+npm install -g anyproxy@beta
+
+anyproxy-ca #生成rootCA证书，生成后需要手动信任
+anyproxy --intercept #启动AnyProxy，并解析所有https请求
+
+
+Ubuntu下添加系统根证书, 只要将证书(扩展名为crt)复制到**/usr/local/share/ca-certificates**文件夹然后运行update-ca-certificates即可
+添加证书：
+$sudo cp 证书路径.crt /usr/local/share/ca-certificates
+$sudo update-ca-certificates
+
+#anyproxy 启动
+
+anyproxy -i
+#rule_default.js 路径
+/usr/local/lib/node_modules/anyproxy/lib
+windows:
+C:\Users\Administrator\AppData\Roaming\npm\node_modules\anyproxy\lib
+
+
+
+anyproxy -i --rule ./weixin.js
+
+npm install -g pm2
+
+npm install  -g urllib-sync
+
+ps aux|grep anyproxy | grep -v 'grep'|awk '{print $2}' |xargs kill -9
+
+
+#虚拟机相关命令
+vagrant box add weixin_caiji.box --name weixin_caiji
