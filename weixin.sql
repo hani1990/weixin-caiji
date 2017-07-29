@@ -21,9 +21,11 @@ CREATE TABLE `post` (
   `datetime` int(11) NOT NULL COMMENT '文章时间戳',
   `readNum` int(11) NOT NULL DEFAULT '1' COMMENT '文章阅读量',
   `likeNum` int(11) NOT NULL DEFAULT '0' COMMENT '文章点赞量',
+  `comment` TEXT NOT NULL DEFAULT '',
+  `mid` varchar(100) NOT NULL DEFAULT ''
   PRIMARY KEY (`id`)
 ) ;
-ALTER TABLE  `post` ADD  `comment` TEXT NOT NULL DEFAULT  ''
+
 CREATE TABLE `tmplist` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `content_url` varchar(100) DEFAULT NULL COMMENT '文章地址',
