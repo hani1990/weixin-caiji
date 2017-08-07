@@ -22,13 +22,13 @@ CREATE TABLE `post` (
   `readNum` int(11) NOT NULL DEFAULT '1' COMMENT '文章阅读量',
   `likeNum` int(11) NOT NULL DEFAULT '0' COMMENT '文章点赞量',
   `comment` TEXT NOT NULL DEFAULT '',
-  `mid` varchar(100) NOT NULL DEFAULT ''
+  `mid` varchar(100) NOT NULL DEFAULT '',
   PRIMARY KEY (`id`)
 ) ;
 
 CREATE TABLE `tmplist` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `content_url` varchar(100) DEFAULT NULL COMMENT '文章地址',
+  `content_url` varchar(200) DEFAULT NULL COMMENT '文章地址',
   `load` int(11) DEFAULT '0' COMMENT '读取中标记',
   PRIMARY KEY (`id`),
   UNIQUE KEY `content_url` (`content_url`)
