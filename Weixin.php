@@ -47,6 +47,7 @@ class Weixin
         $sql = "select * from ". Weixin::POST ." where content_url =  '{$url}' ";
         $ret = $this->db->get_one($sql);
         $this->db->write_log("------------".json_encode($ret));
+        return $ret;
     }
 
     //微信文章入库
