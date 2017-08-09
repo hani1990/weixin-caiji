@@ -35,6 +35,11 @@ class Weixin
 
     }
 
+    public function updateMp($biz, $name = '', $des = '', $icon = ''){
+            
+        return $this->db->update(Weixin::WEIXIN, ['name' => $name, 'des' => $des, 'icon' => $icon ], "biz = '{$biz}' ");
+    }
+
     //在这里将图文消息链接地址插入到采集队列库中
     public  function addQueue($url){
 
