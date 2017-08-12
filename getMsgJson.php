@@ -3,6 +3,7 @@ require_once ("Weixin.php");
 $str = $_POST['str'];
 $url = $_POST['url'];//先获取到两个POST变量
 
+
 $weixin = new Weixin();
 $weixin->log("getMsgJson");
 //先针对url参数进行操作
@@ -106,12 +107,4 @@ if(!$json) {
         }
     }
 
-
-            // $sql = "select * from weixin order by collect asc";
-            // $weixin = $db->get_one($sql);
-            // //update 
-            // $db->update("weixin", ['collect' => time()], "`id` = ". $weixin['id']);
-            // $biz = $weixin['biz'];
-            // $url = "http://mp.weixin.qq.com/mp/getmasssendmsg?__biz=".$biz."#wechat_webview_type=1&wechat_redirect";
-            // echo '<meta http-equiv=refresh content="3;url='.$url.'">';
 ?>

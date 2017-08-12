@@ -29,7 +29,7 @@ $ret = $db->get_all($select_sql);
             $sql = "select * from weixin order by collect";
             $weixin = $db->get_one($sql);
             $biz = $weixin['biz'];
-            $url = "http://mp.weixin.qq.com/mp/getmasssendmsg?__biz=".$biz."#wechat_webview_type=1&wechat_redirect";//拼接公众号历史消息url地址（第一种页面形式）
+            $$url = "https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz={$biz}&scene=124#wechat_redirect";//拼接公众号历史消息url地址（第一种页面形式）
             //$url = "https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=".$biz."&scene=124#wechat_redirect";//拼接公众号历史消息url地址（第二种页面形式）
             //更新刚才提到的公众号表中的采集时间time字段为当前时间戳。
         }
