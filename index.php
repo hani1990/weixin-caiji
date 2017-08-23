@@ -6,7 +6,12 @@
  * Time: 下午7:56
  */
 require_once './vendor/autoload.php';
+require_once './weixinContent.php';
 
+$url = "http://mp.weixin.qq.com/s?__biz=MzIxMjc0NjQxNw==&mid=2247498986&idx=2&sn=ceb23e142982b708d06d11f6c9b549d1&chksm=9743d534a0345c22f63cb7a9aad8116f24c74b4c4aa641dd4cd9addcc6f25fa0b6bbd308c966&scene=27#wechat_redirect";
+$ret = get_content($url);
+var_dump($ret);
+exit();
 /*
  * 通过anyproxy 传过来
  * @param cookie

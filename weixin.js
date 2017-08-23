@@ -43,8 +43,8 @@ module.exports = {
                  //  HttpPost(json.general_msg_list.toString(),requestDetail.url,"getMpBiz.php");
                   //循环采集历史页面
                   var request = require('urllib-sync').request;
-                  var res = request(request_url + 'getMpBiz.php');
-                  newResponse.body += res.data.toString();
+                 // var res = request(request_url + 'getMpBiz.php');
+                //  newResponse.body += res.data.toString();
                   console.log("*****************%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*****");
 
 

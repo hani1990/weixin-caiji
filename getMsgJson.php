@@ -1,5 +1,6 @@
 <?php
 require_once ("Weixin.php");
+require_once ('./weixinContent.php');
 $str = $_POST['str'];
 $url = $_POST['url'];//先获取到两个POST变量
 
@@ -63,6 +64,7 @@ if(!$json) {
                     $data['source_url'] = $source_url;
                     $data['cover'] = $cover;
                     $data['content_url'] = $content_url;
+                    $data['content'] = get_content($content_url);
                     //$data['is_multi'] = $is_multi;
                     $data['datetime'] = intval($datetime);
                     $data['is_multi'] = $is_multi;
@@ -97,6 +99,7 @@ if(!$json) {
                         $data['source_url'] = $source_url;
                         $data['cover'] = $cover;
                         $data['content_url'] = $content_url;
+                        $data['content'] = get_content($content_url);
                         $data['is_multi'] = $is_multi;
                         $lastId = $weixin->addPost($data);
                         echo "标题：" . $title . $lastId . "\n";
